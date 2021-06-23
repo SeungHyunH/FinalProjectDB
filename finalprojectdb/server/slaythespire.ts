@@ -58,3 +58,11 @@ app.get('/item', (req: Request, res: Response) => {
 		res.send(rows)
 	})
 })
+
+app.get('/potion', (req: Request, res: Response) => {
+	const query: string = 'select * from potion'
+	dbc.query(query, (err, rows) => {
+		if (err) return console.log(err)
+		res.send(rows)
+	})
+})

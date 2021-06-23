@@ -32,6 +32,11 @@ export default function App() {
 			아이템
 		</h1>
 		<Item/>
+		<br/><br/><br/>
+		<h1 id ='potion'>
+			포션
+		</h1>
+		<Potion/>
     </div>
   )
 }
@@ -268,6 +273,51 @@ const Item = () => {
 						<td>{item.effect}</td>
 						<td>{item.flavor_text}</td>
 						<td><img src = {`./image/${item.image}`} alt ='NULL'/></td>
+                    </tr>
+                )}
+            </tbody>
+        </table>
+    )
+}
+
+const Potion = () => {
+	const [potions, setPotion] = useState<any[]>([])
+	
+	const fetchPotion = async() => {
+		try {
+			const res = await axios.get('https://final2021.run.goorm.io/potion')
+	        console.log(res)
+			setPotion(res.data)
+		} catch (err) {
+			console.log(err)
+		}
+	}
+	
+	useEffect(() => {
+		fetchPotion()
+	}, [])
+    
+    return (
+        <table>
+            <thead>
+                <tr key='0'>
+                    <th>id</th>
+                    <th>이름</th>
+					<th>등급</th>
+					<th>사용케릭터</th>
+					<th>효과</th>
+					<th>이미지</th>
+                </tr>
+            </thead>
+            <tbody>
+                {potions.map((potion, index) =>
+                    <tr key={index}>
+                        <td>{potion.id}</td>
+                        <td>{potion.name}</td>
+                        <td>{potion.class}</td>
+                        <td>{potion.dedicated}</td>
+						<td>{potion.effect}</td>
+						<td><img src = {`./image/${potion.image}`} alt ='NULL'/></td>
                     </tr>
                 )}
             </tbody>
