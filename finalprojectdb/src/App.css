@@ -1,11 +1,14 @@
 h1 {
-	text-align: center;	
+  text-align: center;
+}
+
+img{
+	width: 70%;
 }
 
 table {
-  font-family: Arial, Helvetica, sans-serif;
-  border-collapse: collapse;
   width: 100%;
+  border-collapse: collapse;
 }
 
 td, th {
@@ -13,23 +16,14 @@ td, th {
   padding: 8px;
 }
 
-tr:nth-child(even){ 
-	background-color: #f2f2f2; 
-}
+tr:nth-child(even){background-color: #92D6CC;}
 
-tr:hover { 
-	background-color: #eea; 
-}
+tr:hover {background-color: #FCE6CC;}
 
 th {
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: left;
-  background-color: #4C4FAF;
+  background-color: #439897;
   color: white;
-}
-
-.boxart {
-	width: 80px;
-	border-radius: 15%;
 }
