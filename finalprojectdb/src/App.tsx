@@ -6,7 +6,7 @@ export default function App() {
   return (
     <div>
         <h1>
-           텀 프로젝트 : Slay the Spire 사전
+           텀 프로젝트 : Slay the Spire 사전(20161271 한승현)
         </h1>
 		<h1 id ='hero'>
 			영웅
@@ -320,7 +320,7 @@ const Potion = () => {
 						<td><img src = {`./image/${potion.image}`} alt ='NULL'/></td>
                     </tr>
                 )}
-            </tbody>
+			</tbody>
         </table>
     )
 }
