@@ -6,7 +6,7 @@ export default function App() {
   return (
     <div>
         <h1>
-           텀 프로젝트 : Slay the Spire
+           텀 프로젝트 : Slay the Spire 사전
         </h1>
 		<h1 id ='hero'>
 			영웅
